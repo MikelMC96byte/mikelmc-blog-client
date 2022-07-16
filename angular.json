@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "mikelmc-blog-client": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "es": "./src/locale/messages.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -61,6 +67,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "es": {
+              "localize": ["es"]
             }
           },
           "defaultConfiguration": "production"
@@ -73,6 +82,9 @@
             },
             "development": {
               "browserTarget": "mikelmc-blog-client:build:development"
+            },
+            "es": {
+              "browserTarget": "mikelmc-blog-client:build:es"
             }
           },
           "defaultConfiguration": "development"
